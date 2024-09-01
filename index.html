@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>賴致元的個人作品集</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script defer src="script.js"></script>
+</head><body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">賴致元的作品集</div>
+            <div class="nav-links">
+                <a href="#home">首頁</a>
+                <a href="#about">關於我</a>
+                <a href="#projects">項目</a>
+                <a href="#contact">聯繫我</a>
+                <a href="https://github.com/ChihYua" target="_blank" class="github-btn">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="section-title">歡迎來到我的作品集</h1>
+            <div class="projects">
+                <div class="project-card">
+                    <img src="logistic.jpg" alt="logistic regression 練習">
+                    <div class="content">
+                        <h2>logistic regression 練習</h2>
+                        <p>使用 logistic regression 分析消費者購買慾望</p>
+                        <a href="https://chihyua.github.io/logistic_regression_iphone/" class="project-link" target="_blank">查看專案</a>
+                    </div>
+                </div>
+            <div class="projects">
+                <div class="project-card">
+                    <img src="SVM.jpg" alt="SVM 3D 可視化">
+                    <div class="content">
+                        <h3>SVM 3D 可視化</h3>
+                        <p>使用 JavaScript 實現的支持向量機(SVM)三維可視化專案</p>
+                        <a href="https://chihyua.github.io/svm_3D/" class="project-link" target="_blank">查看專案</a>
+                    </div>
+                </div>
+            
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2 class="section-title">關於我</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <img src="78161.jpg" alt="賴致元的照片" class="profile-image">
+                <p>我的個性有點執著，對於感興趣或好奇的事物會有許多想法，並想要嘗試，喜歡與人溝通，了解別人的想法。大學與研究所時，從事與林業相關的問卷調查與訪談研究，喜歡聆聽、嘗試理解並統整他人的想法，喜歡團隊合作，也因此大學時參與了許多社團活動，並在部分活動擔任公關、總召等要職。</p>
+                <p>不排斥處理瑣碎的雜事，就學時也經常幫教授處理保險、聯絡等相關事宜，只要指示明確，並會盡全力將其做到最好，也不排斥學習與嘗試新事物，目前正在學習新的外語、AI人工智能以及ESG綠能等相關知識。</p>
+            </div>
+            <div class="about-info">
+                <div class="info-item"><strong>姓名：</strong>賴致元 (Chih-Yuan, Lai)</div>
+                <div class="info-item"><strong>年齡：</strong>27歲</div>
+                <div class="info-item"><strong>電話：</strong>0905-219-121</div>
+                <div class="info-item"><strong>Email：</strong>friendly1774@gmail.com</div>
+                <div class="info-item"><strong>地址：</strong>台中市太平區</div>
+                <div class="info-item"><strong>駕照：</strong>輕型機車駕照</div>
+                <div class="info-item"><strong>語言能力：</strong>英文 (TOEIC 440分)</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-title">專業技能與項目</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Data analysis on computer screen" width="250" height="200">
+                <div class="content">
+                    <h3>SPSS 分析</h3>
+                    <p>擅長一般統計分析、因素分析與羅吉斯迴歸分析</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Event planning whiteboard" width="250" height="200">
+                <div class="content">
+                    <h3>活動規劃</h3>
+                    <p>實體活動規劃與執行經驗，包括森林週活動總召</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Programming code on computer screen" width="250" height="200">
+                <div class="content">
+                    <h3>Django 開發</h3>
+                    <p>具有Django程式設計及Line bot串聯經驗</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <h2 class="section-title">聯繫我</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">姓名</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">訊息</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">發送訊息</button>
+        </form>
+    </section>
+
+    
+</body></html>
