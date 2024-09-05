@@ -246,27 +246,65 @@ button:hover {
     color: rgba(143, 117, 121, 0.838);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .nav-links {
         flex-wrap: wrap;
+        justify-content: center;
     }
-    
-    .github-btn {
-        margin-top: 0.5rem;
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-card img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
 
     .projects {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 
-    .about-content {
-        flex-direction: column;
+    .hero-content h1 {
+        font-size: 2rem;
     }
 
-    .about-text, .about-info {
-        flex: none;
+    .about-content {
+        flex-direction: column;
+        padding: 2rem 0;
+    }
+
+    .about-info, .about-text {
         width: 100%;
-        padding-right: 0;
-        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .contact form {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 0.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .project-card img {
+        height: 120px;
+    }
+
+    button {
+        width: 100%;
     }
 }
