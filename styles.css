@@ -5,6 +5,7 @@ body, html {
     color: #333;
     scroll-behavior: smooth;
 }
+
 .header {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -13,51 +14,45 @@ body, html {
     top: 0;
     z-index: 1000;
 }
+
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
 }
+
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
 .nav-links {
     display: flex;
     gap: 2rem;
 }
+
 .nav-links a {
     text-decoration: none;
     color: #333;
     transition: color 0.3s ease;
 }
+
 .nav-links a:hover {
     color: #007bff;
 }
+
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
     background-size: cover;
     position: relative;
+    padding: 5rem 0;
 }
-.hero-content {
-    text-align: center;
-    color: #fff;
-    z-index: 1;
-}
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-.hero-content p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
+
 .hero::after {
     content: '';
     position: absolute;
@@ -67,110 +62,82 @@ body, html {
     bottom: 0;
     background: rgba(0,0,0,0.5);
 }
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .section {
     padding: 5rem 10%;
 }
+
 .section-title {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 3rem;
 }
-.about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.about-text {
-    flex: 1;
-    padding-right: 2rem;
-}
-.about-info {
-    flex: 1;
-    background-color: #f8f9fa;
-    padding: 2rem;
-    border-radius: 8px;
-}
-.info-item {
-    margin-bottom: 1rem;
-}
-.info-item strong {
-    display: inline-block;
-    width: 120px;
-}
+
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
+    justify-content: center;
 }
+
 .project-card {
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    height: 100%;
 }
+
 .project-card:hover {
     transform: translateY(-5px);
 }
+
 .project-card img {
-    width: 200%;
-    height: 100px;
+    width: 100%;
+    height: 200px;
     object-fit: cover;
 }
+
 .project-card .content {
     padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 .project-card h3 {
     margin: 0 0 0.5rem 0;
 }
+
 .project-card p {
     margin: 0;
     color: #666;
 }
-.contact {
-    background: #f8f9fa;
-}
-.contact form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-.form-group {
-    margin-bottom: 1rem;
-}
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-}
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-.form-group textarea {
-    height: 150px;
-}
-button {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-button:hover {
-    background: #0056b3;
-}
-.profile-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-}
+
 .project-link {
     display: inline-block;
     background-color: #4a4a4a;
@@ -181,20 +148,92 @@ button:hover {
     margin-top: 1rem;
     transition: background-color 0.3s ease;
 }
+
 .project-link:hover {
     background-color: #333;
 }
 
-/* 調整項目卡片樣式以適應新的內容 */
-.project-card {
+.about-content {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
-.project-card .content {
-    flex-grow: 1;
+
+.about-text {
+    flex: 1;
+    padding-right: 2rem;
 }
+
+.about-info {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.info-item {
+    margin-bottom: 1rem;
+}
+
+.info-item strong {
+    display: inline-block;
+    width: 120px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.contact {
+    background: #f8f9fa;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
 .github-btn {
-    background-color:  rgba(143, 117, 121, 0.838);
+    background-color: rgba(143, 117, 121, 0.838);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -203,17 +242,10 @@ button:hover {
 }
 
 .github-btn:hover {
-    background-color:  white;
+    background-color: white;
+    color: rgba(143, 117, 121, 0.838);
 }
 
-/* 調整導航欄樣式以適應新按鈕 */
-.nav-links {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-}
-
-/* 確保在較小的屏幕上導航欄仍然看起來不錯 */
 @media (max-width: 768px) {
     .nav-links {
         flex-wrap: wrap;
@@ -221,5 +253,20 @@ button:hover {
     
     .github-btn {
         margin-top: 0.5rem;
+    }
+
+    .projects {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text, .about-info {
+        flex: none;
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 2rem;
     }
 }
